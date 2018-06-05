@@ -78,3 +78,35 @@ header div{
     font-size: 2rem;
     line-height: 1.2;
 }
+
+.gallery{
+  justify-content: center;
+}
+
+.gallery-item{
+  width: 5rem;
+  height: 8rem;
+  margin: 3rem;
+}
+
+.gallery-flex-content{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+
+.gallery-item img{
+  margin-bottom: 1rem;
+  height: auto;
+}
+
+.narrow{
+  width: 3.5rem;
+}
+
+.wide{
+  width: 5rem;
+}
