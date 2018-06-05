@@ -15,11 +15,6 @@ html{
   flex-wrap: wrap;
 }
 
-.contentwrapper{
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 header{
   height: 30rem;
   width: 100%;
@@ -37,6 +32,10 @@ nav{
   align-items: center;
   position: relative;
   top: 1rem;
+}
+
+.nav-small{
+  display: none;
 }
 
 nav div ul li{
@@ -87,15 +86,15 @@ header div{
   width: 5rem;
   height: 8rem;
   margin: 3rem;
-}
-
-.gallery-flex-content{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
+}
+
+.gallery-flex-content, .about-item{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .gallery-item img{
@@ -109,4 +108,175 @@ header div{
 
 .wide{
   width: 5rem;
+}
+
+.about{
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.about-item{
+  width: 35%;
+}
+
+.about-item:first-child{
+  margin-right: 5%;
+}
+
+.about-title{
+  color: white;
+  background-color: cadetblue;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 10rem;
+  padding: .5rem 0 .5rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+footer div, .footer-small{
+  background-color: azure;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+footer div a{
+  padding: 4rem 0 4rem 4rem;
+  color: black;
+  text-decoration: none;
+}
+
+footer div a:hover{
+  color: grey;
+}
+
+footer div a img{
+  display: inline-block;
+  height: 1.5rem;
+  width: auto;
+  margin-right: 1rem;
+}
+
+.footer-small{
+  display: none;
+}
+
+.contentwrapper{
+  min-width: 420px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .contentwrapper{
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .contentwrapper{
+    width: 100%;
+  }
+
+  header{
+    height: 22rem;
+  }
+
+  nav{
+    position: static;
+    width: 100%;
+  }
+
+  .banner-head{
+    margin: 5rem 2rem 0 0;
+    padding: .75rem 4rem;
+  }
+
+  .banner-head h1{
+    font-size: 1.33rem;
+  }
+}
+
+@media only screen and (max-width: 730px){
+
+  header{
+    height: 17rem;
+    background-position: 20%;
+  }
+
+  .nav-small{
+    display: block;
+  }
+
+  .nav-big{
+    display: none;
+  }
+
+  .banner-head{
+    width: 100%;
+    margin: 9rem 0 0 0;
+    text-align: center;
+  }
+
+  .banner-head h1{
+    padding: .33rem 0;
+    font-size: 1rem;
+  }
+
+  .gallery{
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+    width: 100%;
+  }
+
+  .gallery-item{
+    margin: .79rem 0;
+    justify-content: flex-start;
+  }
+
+  .description{
+    font-size: .77rem;
+  }
+
+  .about{
+    margin: 0;
+  }
+
+  .about-item{
+    width: 100%;
+    margin: 0;
+  }
+
+  .about-item:first-child{
+    width: 100%;
+    margin: 4rem 0 0 0;
+  }
+
+  .about-title{
+    margin: 0;
+    width: 100%;
+  }
+
+  .about-description{
+    font-size: .77rem;
+    margin: 1rem 0 0 0;
+    padding: .5rem 0 .5rem 1.25rem;
+  }
+
+  .footer-big{
+    display: none;
+  }
+
+  .footer-small{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .footer-small img {
+    height: 1rem;
+    width: auto;
+    display: block;
+  }
 }
